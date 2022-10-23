@@ -1,6 +1,4 @@
-<div align="center"> <a href="/"> <img alt="VbenAdmin Logo" width="200" height="200" src="https://anncwb.github.io/anncwb/images/logo.png"> </a> <br> <br>
-
-[![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
+<div align="center"> <a href="/"> <img alt="VbenAdmin Logo" width="200" height="200" src="./public/logo.png"> </a> <br> <br>
 
 <h1>Vue Stunning Sky Admin</h1>
 </div>
@@ -19,32 +17,17 @@ Vue Stunning Sky Admin 是一个免费开源的中后台模版。使用了最新
 - **国际化**：内置完善的国际化方案
 - **Mock 数据** 内置 Mock 数据方案
 - **权限** 内置完善的动态路由权限生成方案
-- **组件** 二次封装了多个常用的组件
 
 ## 预览
 
-- [vue-vben-admin](https://vvbin.cn/next/) - 完整版中文站点
-- [vue-vben-admin-gh-pages](https://anncwb.github.io/vue-vben-admin/) - 完整版 github 站点
-- [vben-admin-thin-next](https://vvbin.cn/thin/next/) - 简化版中文站点
-- [vben-admin-thin-gh-pages](https://anncwb.github.io/vben-admin-thin-next/) - 简化版 github 站点
+- [vue-stunning-sky-admin](https://github.com/Blackzfq/vue-stunning-sky-admin) - 完整版中文站点
+- [vue-stunning-sky-admin-thin-next](https://github.com/Blackzfq/vue-stunning-sky-admin) - 简化版中文站点
 
-测试账号: vben/123456
-
-<p align="center">
-    <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
-    <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
-    <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
-</p>
-
-### 使用 Gitpod
-
-在 Gitpod（适用于 GitHub 的免费在线开发环境）中打开项目，并立即开始编码.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anncwb/vue-vben-admin)
+测试账号: ssky/123456
 
 ## 文档
 
-[文档地址](https://vvbin.cn/doc-next/)
+[文档地址(暂无)]()
 
 ## 准备
 
@@ -62,42 +45,33 @@ Vue Stunning Sky Admin 是一个免费开源的中后台模版。使用了最新
 - 获取项目代码
 
 ```bash
-git clone https://github.com/anncwb/vue-vben-admin.git
+git clone https://github.com/Blackzfq/vue-stunning-sky-admin.git
 ```
 
 - 安装依赖
 
 ```bash
-cd vue-vben-admin
+cd vue-stunning-sky-admin
 
-pnpm install
+yarn install
 
 ```
 
 - 运行
 
 ```bash
-pnpm serve
+yarn dev
 ```
 
 - 打包
 
 ```bash
-pnpm build
+yarn build
 ```
 
 ## 更新日志
 
-[CHANGELOG](./CHANGELOG.zh_CN.md)
-
-## 项目地址
-
-- [vue-vben-admin](https://github.com/anncwb/vue-vben-admin) - 完整版
-- [vue-vben-admin-thin-next](https://github.com/anncwb/vben-admin-thin-next) - 简化版
-
-## 如何贡献
-
-非常欢迎你的加入！[提一个 Issue](https://github.com/anncwb/vue-vben-admin/issues/new/choose) 或者提交一个 Pull Request。
+[CHANGELOG]()
 
 **Pull Request:**
 
@@ -147,29 +121,11 @@ pnpm build
 - [vite-plugin-compression](https://github.com/anncwb/vite-plugin-compression) - 用于打包输出.gz|.brotil 文件
 - [vite-plugin-svg-icons](https://github.com/anncwb/vite-plugin-svg-icons) - 用于快速生成 svg 雪碧图
 
-## 后台整合示例
-
-- [lamp-cloud](https://github.com/zuihou/lamp-cloud) - 基于 SpringCloud Alibaba 的微服务中后台快速开发平台
-- [matecloud](https://github.com/matevip/matecloud) - MateCloud 微服务脚手架，基于 Spring Cloud 2020.0.3、SpringBoot 2.5.3 的全开源平台
 
 ## 维护者
 
-[@Vben](https://github.com/anncwb)
-
-## 捐赠
-
-如果你觉得这个项目对你有帮助，你可以帮作者买一杯咖啡表示支持!
-
-![donate](https://anncwb.github.io/anncwb/images/sponsor.png)
-
-<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aed;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
+[@Blackzfq](https://github.com/Blackzfq)
 
 ## 交流
 
-`Vue-vben-Admin` 是完全开源免费的项目，在帮助开发者更方便地进行中大型管理系统开发，同时也提供 QQ 交流群使用问题欢迎在群内提问。
-
-- QQ 群 `569291866`
-
-## License
-
-[MIT © Vben-2020](./LICENSE)
+`vue-stunning-sky-admin` 是完全开源免费的项目，在帮助开发者更方便地进行中大型管理系统开发
