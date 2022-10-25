@@ -1,18 +1,44 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "baseUrl": "./", // 配置为当前的根目录
+    "target": "esnext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "element-plus/global"], // 添加要包含的类型声明文件名列表，只有在这里列出的模块的声明文件才会被加载进来
+    "skipLibCheck": true, // 忽略所有声明文件(*.d.ts)的类型检查
+    "isolatedModules": true, // 将每个文件作为单独的模块
+    "paths": {
+      "@/*": ["src/*"],
+      "@views/*": ["src/views/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@router/*": ["src/router/*"],
+      "@stores/*": ["src/stores/*"],
+      "@typings/*": ["src/typings/*"],
+      "@utils/*": ["src/utils/*"],
+    },
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" }
+  ],
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue",
+    "types",
+    "*.ts"
+  ], // 需要编译的文件范围
+  "exclude": [
+    "node_modules",
+    "dist"
+  ], // 不需要编译的文件范围
+  "files": [],
 }
