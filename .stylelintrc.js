@@ -10,7 +10,7 @@ module.exports = {
   ],
   overrides: [
     {
-        files: ['**/*.{scss,css,sass,less}'], // css 相关文件由 postcss-scss 处理
+        files: ['**/*.{scss,sass,less}'], // css 相关文件由 postcss-scss 处理
         customSyntax: 'postcss-less'
     },
   ],

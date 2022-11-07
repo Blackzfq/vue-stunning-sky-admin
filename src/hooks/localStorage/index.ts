@@ -9,6 +9,7 @@ import { SystemName } from '@utils/config'
 export enum LocalKey {
   LOGIN = 'LOGIN',
   TOKEN = 'TOKEN',
+  MENU = 'MENU',
 }
 
 export function weblocal() {

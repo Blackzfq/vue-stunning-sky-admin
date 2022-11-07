@@ -15,7 +15,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 
 // 按需注册组件
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 // 引入mockjs
 import { viteMockServe } from 'vite-plugin-mock'
@@ -52,12 +52,12 @@ export default defineConfig(({ mode }) => {
       }),
 
       AutoImport({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [AntDesignVueResolver()],
       }),
 
       Components({
         dirs: ['src/components'],
-        resolvers: [ElementPlusResolver()],
+        resolvers: [AntDesignVueResolver()],
       }),
     ],
 

@@ -1,3 +1,3 @@
-const SystemName = 'pharmacy'
-const SystemTitle = 'PHARMACY'
+const SystemName = 'Tusky'
+const SystemTitle = 'Tusky'
 export { SystemName, SystemTitle }
