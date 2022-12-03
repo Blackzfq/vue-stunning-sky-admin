@@ -1,6 +1,6 @@
 import { reactive, computed, ref, unref } from 'vue'
 import type { RouteRecordRaw } from 'vue-router'
-import Layout from '@/layouts/default/LayoutDefault.vue'
+import Layout from '@/layouts/PageLayout.vue'
 import auth from './auth'
 import { weblocal, LocalKey } from '@/hooks/localStorage'
 import router from '../index'

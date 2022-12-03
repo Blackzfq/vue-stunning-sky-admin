@@ -1,4 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router'
+import Layout from '@/layouts/PageLayout.vue'
 
 /**
  * required
@@ -25,6 +26,22 @@ const basisRouters: Array<RouteRecordRaw> = [
     name: 'login',
     component: () => import('../../views/login/LoginPage.vue'),
     meta: { title: '登录', requiresAuth: false, hidden: true, transition: 'fade' },
+  },
+  {
+    path: '/permission',
+    sensitive: true,
+    name: 'permission',
+    component: Layout,
+    redirect: '/permission/role',
+    children: [
+      {
+        path: 'role',
+        sensitive: true,
+        name: 'role',
+        component: () => import('@/views/system/role/roleManage.vue'),
+        meta: { title: '角色管理', requiresAuth: false, hidden: true, transition: 'fade' },
+      },
+    ],
   },
 ]
 

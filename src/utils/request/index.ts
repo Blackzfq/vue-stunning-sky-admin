@@ -1,6 +1,6 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
-import { ElMessage } from 'element-plus'
+import { message } from 'ant-design-vue'
 import { LocalKey, weblocal } from '@/hooks/localStorage'
 
 const { getLocalStorage } = weblocal()
@@ -80,7 +80,7 @@ export default class Request {
       },
       (err: any) => {
         // 请求错误，此处使用ant message进行提示
-        ElMessage.error('请求发生错误')
+        message.error('请求发生错误')
         return Promise.reject(err)
       }
     )
@@ -92,7 +92,7 @@ export default class Request {
           data: { code, msg, data },
         } = res
         if (code === 200) return data
-        ElMessage.error(msg || '未知错误信息')
+        message.error(msg || '未知错误信息')
         return Promise.reject(res)
       },
       (err: any) => {
@@ -100,42 +100,42 @@ export default class Request {
         const msg = ''
         switch (err.response.status) {
           case 400:
-            ElMessage.error('请求错误(400)')
+            message.error('请求错误(400)')
             break
           case 401:
-            ElMessage.error('未授权，请重新登录(401)')
+            message.error('未授权，请重新登录(401)')
             // 这里可以做清空storage并跳转到登录页的操作
             break
           case 403:
-            ElMessage.error('拒绝访问(403)')
+            message.error('拒绝访问(403)')
             break
           case 404:
-            ElMessage.error('请求出错(404)')
+            message.error('请求出错(404)')
             break
           case 408:
-            ElMessage.error('请求超时(408)')
+            message.error('请求超时(408)')
             // 这里可以修改状态为超时状态或重新发起请求
             break
           case 500:
-            ElMessage.error('服务器错误(500)')
+            message.error('服务器错误(500)')
             break
           case 501:
-            ElMessage.error('服务未实现(501)')
+            message.error('服务未实现(501)')
             break
           case 502:
-            ElMessage.error('网络错误(502)')
+            message.error('网络错误(502)')
             break
           case 503:
-            ElMessage.error('服务不可用(503)')
+            message.error('服务不可用(503)')
             break
           case 504:
-            ElMessage.error('网络超时(504)')
+            message.error('网络超时(504)')
             break
           case 505:
-            ElMessage.error('HTTP版本不受支持(505)')
+            message.error('HTTP版本不受支持(505)')
             break
           default:
-            ElMessage.error(`连接出错(${err.response.status})!`)
+            message.error(`连接出错(${err.response.status})!`)
         }
         return Promise.reject(err.response)
       }

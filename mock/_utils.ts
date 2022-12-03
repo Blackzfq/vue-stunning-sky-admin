@@ -14,3 +14,17 @@ export function resultError(msg = '请求失败') {
     msg,
   }
 }
+
+export interface requestParams {
+  method: string
+  body: any
+  headers?: { Authorization?: string }
+  query: any
+}
+/**
+ * @description 本函数用于从request数据中获取token，请根据项目的实际情况修改
+ *
+ */
+export function getRequestToken({ headers }: requestParams): string | undefined {
+  return headers?.Authorization?.split(' ')[1]
+}
